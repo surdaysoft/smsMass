@@ -1,0 +1,41 @@
+<html ng-app="api">
+	<head>
+		<title>Tutorial API</title>  
+		<script type="text/javascript" src="js/angular.min.js"></script>
+	</head>
+	<style>
+		.border{
+			border: solid 1px black;
+		}
+	</style>
+
+	<body> 
+		<div ng-controller="dosen">   
+			<table class="border">
+				<thead>
+				<tr>	
+					<td class="border">Nama Grup</td>
+					<td class="border">Keterangan</td>
+				</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in dosens">
+						<td class="border">{{item.nama_grup}}</td>
+						<td class="border">{{item.ket}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div> 
+		
+		<script>  
+			var app = angular.module('api', []);
+			var url_web = "http://localhost/demo/restAPI_CI/";
+
+			app.controller('dosen', function($scope, $http){  
+				$http.get(url_web+"index.php/main/getAll").success(function(resp){
+					$scope.dosens = resp; 
+				});
+			}); 
+		</script>
+	</body>
+</html>

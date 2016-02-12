@@ -1,0 +1,53 @@
+<header>
+<div class="navbar-fixed">
+<!--
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+  </div>
+</nav>
+-->
+<nav>
+  <a class="brand-logo">Logo</a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="#/">Home</a></li>
+    <li><a href="#/pesan">Pesan</a></li>
+    <li><a href="#/kontak">Kontak</a></li>
+    <li><a href="#/grup">Grup Kontak</a></li>
+  </ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#/"><i class="material-icons left">dashboard</i> Home</a></li>
+    <li><a href="#/pesan"><i class="material-icons left">chat</i> Pesan</a></li>
+    <li><a href="#/kontak"><i class="material-icons left">phone</i> Kontak</a></li>
+    <li><a href="#/grup"><i class="material-icons left">supervisor_account</i> Grup Kontak</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+</nav>
+</div>
+</header>
+<script>
+  /*
+  $( document ).ready(function(){
+     $(".button-collapse").sideNav();
+  });
+  */
+  $('.button-collapse').sideNav({
+      menuWidth: 240, // Default is 240
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+</script>

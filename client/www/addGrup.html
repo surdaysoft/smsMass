@@ -1,0 +1,28 @@
+<div class="container">
+  
+  <div class="row wow fadeInDown">
+    <div class="input-field col s6">
+      <input type="text" ng-model="databaru.nama"><br>
+      <label for="icon_prefix">Nama Grup</label>
+      
+    </div>
+    <div class="input-field col s6">
+      <input type="text" ng-model="databaru.ket"><br>  
+      <label for="icon_prefix">Keterangan</label>    
+    </div>    
+  </div>
+  <div class="row wow fadeLeft">
+    <div class="input-field col s12">
+      <button class="waves-effect waves-light btn" ng-click="tambahData()"><i class="material-icons left">add</i>Tambah</button>     
+    
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">search</i>
+      <input id="icon_prefix" type="text" ng-model="hasil" ass="validate">
+      <label for="icon_prefix">Pencarian</label>
+    </div>
+  </div>
+</div>
